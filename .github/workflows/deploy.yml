@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: '20'
 
-      - - name: Install Dependencies
+      - name: Install Dependencies
         run: npm install
         working-directory: ./findmybites
 
-      - - name: Build Docker Image
+      - name: Build Docker Image
         run: docker build -t findmybites-backend ./findmybites .
 
       - name: Deploy to VPS
